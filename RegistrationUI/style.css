@@ -1,0 +1,214 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Noto+Sans:wght@100;400;500&family=Roboto+Slab:wght@300&display=swap');
+
+
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Merriweather',sans-serif;
+  }
+
+  body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+       align-items: center;
+       
+       
+     background: linear-gradient(130deg, #71b7e6, #9b59b6);
+
+
+  }
+
+  .container{
+      max-width: 650px;
+      width: 100%;
+      background: #fff;
+      padding: 24px 28px;
+      border-radius: 8px;
+  }
+
+  .container .title{
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+     margin-left: 176px;
+    
+  }
+
+  .container .title::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 30px;
+      background: linear-gradient(130deg, #71b7e6, #147e17);
+
+    
+  }
+
+
+  .container form .user-details{
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 20px 0 12px 0;
+  }
+
+  form .user-details .input-box{
+   
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 13px;
+  }
+
+  .user-details .input-box .details{
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 400;
+
+  }
+
+  .user-details .input-box input{
+      height: 45px;
+      width: 100%;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding-left: 6px;
+      font-size: 14px;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;  
+
+
+  }
+
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+        border-color: #6a3a7d;
+  }
+
+
+     form .gender-details{
+          max-width: 600px;
+          width: 80%;
+     }
+
+
+  form .gender-details .gender-title{
+   font-size: 18px;
+    font-weight: 450;
+  }
+
+
+  form .gender-details .category{
+    display: flex;
+     
+
+     margin: 15px 0;
+     
+     justify-content: space-between;
+  }
+
+  .gender-details .category label{
+      display: flex;
+  }
+
+  .gender-details .category .dot{
+      height: 18px;
+      width: 18px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+        border: 5px solid transparent;
+         margin-right: 8px;
+         transition: all 0.2s ease;
+         cursor: pointer;
+
+  }
+
+  #dot-1:checked ~ .category label .one,
+  #dot-2:checked ~ .category label .two,
+  #dot-3:checked ~ .category label .three{
+      border-color: #d9d9d9;
+      background: #7817bd;
+  }
+
+
+  form input[type = "radio"]{
+     display: none;
+  }
+
+
+
+form .button{
+
+    height: 30px;
+    margin: 40px 0;
+
+}
+
+form .button input{
+     height: 100%;
+     width: 100%;
+     color: #fff;
+     outline: none;
+     border: none;
+     font-size: 17px;
+     background: rgb(29, 201, 29);
+     font-weight: bold;
+     cursor: pointer;
+     letter-spacing: 1px;
+     border-radius: 6px;
+     transition: ease 0.2s;
+}
+
+
+form .button input:active{
+      transform: scale(0.95);
+}
+
+.container .title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 160px;
+    background: linear-gradient(130deg, #71b7e6, #147e17);
+
+  
+}
+
+
+
+
+
+@media(max-width: 570px){
+     .container{
+         max-width: 100%;
+     }
+
+     form .user-details .input-box{
+         margin-bottom: 15px;
+          width: 100%;
+     }
+
+     form .gender-details .category{
+         width: 100%;
+     }
+
+     .container form .user-details{
+         max-height:300px ;
+          overflow-y: scroll;
+     }
+
+     .user-details::-webkit-scrollbar{
+           width: 0;  
+     }
+}
+
+
+
+
